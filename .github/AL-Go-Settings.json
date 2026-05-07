@@ -20,5 +20,34 @@
     "EnvironmentName": "Acceptance",
     "ContinuousDeployment": true,
     "runs-on": "self-hosted"
-  }
+  },
+  "ConditionalSettings": [
+    {
+      "workflows": [
+        "Update AL-Go System Files"
+      ],
+      "settings": {
+        "workflowSchedule": {
+          "cron": "15 15 * * 0",
+          "includeBranches": [
+            "main"
+          ]
+        }
+      }
+    },
+    {
+      "workflows": [
+        "Test Next Minor",
+        "Test Next Major"
+      ],
+      "settings": {
+        "workflowSchedule": {
+          "cron": "15 15 * * 0",
+          "includeBranches": [
+            "main"
+          ]
+        }
+      }
+    }
+  ]
 }
