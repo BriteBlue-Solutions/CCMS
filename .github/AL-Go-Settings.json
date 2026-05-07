@@ -28,7 +28,7 @@
       ],
       "settings": {
         "workflowSchedule": {
-          "cron": "15 15 * * 0",
+          "cron": "",
           "includeBranches": [
             "main"
           ]
@@ -42,7 +42,7 @@
       ],
       "settings": {
         "workflowSchedule": {
-          "cron": "15 15 * * 0",
+          "cron": "",
           "includeBranches": [
             "main"
           ]
